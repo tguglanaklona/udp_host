@@ -6,8 +6,7 @@
  */
 
 #include <cstdlib>
-#include <iostream>
-
+#include "net.h"
 using namespace std;
 
 /*
@@ -18,7 +17,7 @@ int main(int argc, char** argv) {
     // create socket
 
     const int port = 30000;
-    Socket socket;
+    net::Socket socket;
     if ( !socket.Open( port ) )
     {
         cout << "failed to create socket!\n";
@@ -28,13 +27,13 @@ int main(int argc, char** argv) {
     // send a packet
 
     const char data[] = "hello world!";
-    socket.Send( Address(127,0,0,1,port), data, sizeof( data ) );
+    socket.Send( net::Address(127,0,0,1,port), data, sizeof( data ) );
 
     // receive packets
 
     while ( true )
     {
-        Address sender;
+        net::Address sender;
         unsigned char buffer[256];
         int bytes_read = socket.Receive( sender, buffer, sizeof( buffer ) );
         if ( !bytes_read )
