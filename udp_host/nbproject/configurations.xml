@@ -14,6 +14,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>main.cpp</itemPath>
+      <itemPath>main_client.cpp</itemPath>
+      <itemPath>main_server.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -39,6 +41,10 @@
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="main_client.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="net.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
@@ -63,6 +69,10 @@
         </asmTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_client.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_server.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="net.h" ex="false" tool="3" flavor2="0">
       </item>
