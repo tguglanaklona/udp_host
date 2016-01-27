@@ -9,6 +9,8 @@
 #include "net.h"
 using namespace std;
 
+int process();
+
 /*
  * 
  */
@@ -35,9 +37,12 @@ int main(int argc, char** argv) {
             continue;
         
         // process packet
-        cout << "packet received\n";
+        process();
     }
     
     return 0;
 }
 
+int process(){
+	cout << "packet received\n";
+}

@@ -27,6 +27,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <string.h>
+#include <cstdlib>
 
 
 /* Main entry point. */
@@ -41,7 +42,7 @@ int main(int argc, char** argv) {
      terminate normally. This limits the impact of accidental memory leaks
      and similar hiccups. */
 
-  for (int i=0; i<1000; i++) {
+  while (__AFL_LOOP(1000)) {
 
     /*** PLACEHOLDER CODE ***/
 
@@ -77,7 +78,7 @@ int main(int argc, char** argv) {
     }
 
     /*** END PLACEHOLDER CODE ***/
-    raise(SIGSTOP);
+
   }
 
   /* Once the loop is exited, terminate normally - AFL will restart the process
