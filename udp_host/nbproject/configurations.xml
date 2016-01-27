@@ -15,7 +15,9 @@
                    projectFiles="true">
       <itemPath>main.cpp</itemPath>
       <itemPath>main_client.cpp</itemPath>
+      <itemPath>main_client_afl.cpp</itemPath>
       <itemPath>main_server.cpp</itemPath>
+      <itemPath>main_server_afl.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -43,7 +45,11 @@
       </item>
       <item path="main_client.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="main_client_afl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main_server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_server_afl.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="net.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -72,7 +78,11 @@
       </item>
       <item path="main_client.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="main_client_afl.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main_server.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="main_server_afl.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="net.h" ex="false" tool="3" flavor2="0">
       </item>

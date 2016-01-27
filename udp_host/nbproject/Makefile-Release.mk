@@ -37,7 +37,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/main_client.o \
-	${OBJECTDIR}/main_server.o
+	${OBJECTDIR}/main_client_afl.o \
+	${OBJECTDIR}/main_server.o \
+	${OBJECTDIR}/main_server_afl.o
 
 
 # C Compiler Flags
@@ -74,10 +76,20 @@ ${OBJECTDIR}/main_client.o: main_client.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_client.o main_client.cpp
 
+${OBJECTDIR}/main_client_afl.o: main_client_afl.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_client_afl.o main_client_afl.cpp
+
 ${OBJECTDIR}/main_server.o: main_server.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_server.o main_server.cpp
+
+${OBJECTDIR}/main_server_afl.o: main_server_afl.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_server_afl.o main_server_afl.cpp
 
 # Subprojects
 .build-subprojects:
