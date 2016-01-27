@@ -28,6 +28,10 @@
 #include <signal.h>
 #include <string.h>
 #include <cstdlib>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <fcntl.h>
+#include <assert.h>
 
 
 /* Main entry point. */

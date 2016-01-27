@@ -39,7 +39,7 @@
 #endif
 
 #include <assert.h>
-#include <iostream>
+#include <stdio.h>
 
 namespace net
 {
