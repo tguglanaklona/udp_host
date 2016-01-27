@@ -32,11 +32,20 @@
 #include <netinet/in.h>
 #include <fcntl.h>
 #include <assert.h>
+#include "net.h"
 
 
 /* Main entry point. */
 
 int main(int argc, char** argv) {
+
+  const int port = 40000;
+  net::Socket socket;
+  //if (!socket.Open(port))
+  //{
+  //  printf("%s", "failed to create a socket!\n");
+  //  return 0;
+  //}
 
   char buf[65535]; /* Example-only buffer, you'd replace it with other global or
                     local variables appropriate for your use case. */
