@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include "net.h"
 using namespace std;
+#include <iostream>
 
 /*
  * 
