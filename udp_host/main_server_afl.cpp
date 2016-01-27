@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     while ( true )
     {
         net::Address sender;
-        unsigned char buffer[65534];
+        unsigned char buffer[65535];
         int bytes_read = socket.Receive( sender, buffer, sizeof( buffer ) );
         if ( !bytes_read )
             continue;
