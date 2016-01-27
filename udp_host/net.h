@@ -172,7 +172,7 @@ namespace net
 
 			if ( socket <= 0 )
 			{
-				std::cout << "failed to create socket\n";
+				printf("%s", "failed to create socket\n");
 				socket = 0;
 				return false;
 			}
@@ -186,7 +186,7 @@ namespace net
 		
 			if ( bind( socket, (const sockaddr*) &address, sizeof(sockaddr_in) ) < 0 )
 			{
-				std::cout << "failed to bind socket\n";
+				printf("%s", "failed to bind socket\n");
 				Close();
 				return false;
 			}
@@ -198,7 +198,7 @@ namespace net
 				int nonBlocking = 1;
 				if ( fcntl( socket, F_SETFL, O_NONBLOCK, nonBlocking ) == -1 )
 				{
-					std::cout << "failed to set non-blocking socket\n";
+					printf("%s", "failed to set non-blocking socket\n");
 					Close();
 					return false;
 				}

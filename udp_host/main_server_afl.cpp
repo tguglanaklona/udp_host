@@ -7,7 +7,7 @@
 
 #include <cstdlib>
 #include "net.h"
-using namespace std;
+//using namespace std;
 
 int process();
 
@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     net::Socket socket;
     if ( !socket.Open( port ) )
     {
-        cout << "failed to create socket!\n";
+        printf("%s", "failed to create socket!\n");
         return false;
     }
 
@@ -44,5 +44,5 @@ int main(int argc, char** argv) {
 }
 
 int process(){
-	cout << "packet received\n";
+	printf("%s", "packet received\n");
 }
